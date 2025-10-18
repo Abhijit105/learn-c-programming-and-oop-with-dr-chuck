@@ -1,10 +1,17 @@
 #include <stdio.h>
 
 int main()	{
-	char line[1000];
-	printf("Enter line:\n");
-	fgets(line, 1000, stdin);
-	printf("%s\n", line);
+	int guess;
+	while( scanf("%d", &guess) != EOF )	{
+		if ( guess > 42 )	{
+			printf("Too high.\n");
+		}	else if ( guess < 42 )	{
+		       printf("Too low.\n");
+		}	else	{
+			printf("Nice work.\n");
+			break;
+		}
+	}
 
 	return 0;
 }
